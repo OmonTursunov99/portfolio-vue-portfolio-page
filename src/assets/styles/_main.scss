@@ -1,0 +1,74 @@
+@import "responsive";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: var(--gz-clr-dark);
+  color: var(--gz-clr-white);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 132px;
+    left: 0;
+    background-image: url("./images/fire-left.png");
+    width: 47.65%;
+    height: 56.45%;
+    z-index: -1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 402px;
+    right: 0;
+    background-image: url("./images/fire-right.png");
+    width: 52.7%;
+    height: 62.4%;
+    z-index: -1;
+  }
+
+  @include adaptive-tablet {
+    &::after {
+      top: 402px;
+    }
+  }
+
+  @include adaptive-laptop {
+    &::after {
+      top: 402px;
+    }
+  }
+
+  @include adaptive-mobile {
+    &::after {
+      top: 402px;
+    }
+  }
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+ul {
+  li {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+    }
+  }
+}
