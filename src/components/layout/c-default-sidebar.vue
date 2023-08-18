@@ -77,6 +77,7 @@ function changeVisible() {
   &__action {
     padding: var(--gz-space-xs) 5px var(--gz-space-xs) var(--gz-space-xs);
     margin-left: auto;
+    display: none;
 
     svg {
       transition: var(--gz-transition);
@@ -158,6 +159,10 @@ function changeVisible() {
       &--open {
         height: 392px;
       }
+    }
+
+    &__action {
+      display: block;
     }
   }
 }
